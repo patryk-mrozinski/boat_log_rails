@@ -7,6 +7,11 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 gem 'bcrypt', '~> 3.1.7'
 
+# graphql related
+gem "graphql", "~> 2.3"
+gem "graphiql-rails", "~> 1.10"
+gem "sprockets-rails", "~> 3.5"
+
 group :development, :test do
   gem 'annotate'
   gem 'brakeman', require: false
