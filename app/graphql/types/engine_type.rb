@@ -2,7 +2,7 @@
 
 module Types
   class EngineType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :type_name, String, null: false
     field :power, Integer, null: false
     field :brand, String, null: false

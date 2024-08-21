@@ -2,7 +2,7 @@
 
 module Types
   class DailySummaryType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :time_on_sails, Integer, null: false
     field :time_on_engine, Integer, null: false
     field :time_position_lights_on, GraphQL::Types::ISO8601DateTime

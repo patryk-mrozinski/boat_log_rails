@@ -2,7 +2,7 @@
 
 module Types
   class WatchType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :start_time, GraphQL::Types::ISO8601DateTime, null: false
     field :end_time, GraphQL::Types::ISO8601DateTime
     field :number, String

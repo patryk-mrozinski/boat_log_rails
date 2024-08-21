@@ -2,7 +2,7 @@
 
 module Types
   class LogEntryType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :course_angle, Integer, null: false
     field :see_condition, String, null: false
     field :boat_speed, Float, null: false

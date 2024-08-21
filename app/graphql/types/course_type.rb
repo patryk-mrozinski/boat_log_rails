@@ -2,7 +2,7 @@
 
 module Types
   class CourseType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :departure_time, GraphQL::Types::ISO8601DateTime, null: false
     field :departure_location, String, null: false
     field :arriving_time, GraphQL::Types::ISO8601DateTime

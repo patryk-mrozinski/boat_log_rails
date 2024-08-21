@@ -2,7 +2,7 @@
 
 module Types
   class SailType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Types::UuidType, null: false
     field :type_name, String, null: false
     field :area, Float, null: false
     field :marks, String
