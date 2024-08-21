@@ -23,8 +23,8 @@ class User < ApplicationRecord
   has_many :chartered_boats, through: :boat_users, source: :boat
 
   validates_presence_of :first_name, :last_name, :email, :password_digest
-  
-  enum :role, crew_member: "crew_member", first_officer: "first_officer", captain: "captain"
+
+  enum :role, crew_member: 'crew_member', first_officer: 'first_officer', captain: 'captain'
 
   has_secure_password
 end
