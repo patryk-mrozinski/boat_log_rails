@@ -1,6 +1,6 @@
 module Types
   class UuidType < Types::BaseScalar
-    description "A UUID (Universally Unique Identifier)"
+    description 'A UUID (Universally Unique Identifier)'
 
     def self.coerce_input(input_value, _context)
       UUIDTools::UUID.parse(input_value)

@@ -18,7 +18,7 @@ module Types
       ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
-    field :boats, [Types::BoatType], null: false
+    field :boats, [ Types::BoatType ], null: false
     def boats
       Boat.all
     end

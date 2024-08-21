@@ -17,12 +17,12 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
     # associations
-    field :trips, [Types::TripType]
-    field :log_entries, [Types::LogEntryType]
-    field :watches, [Types::WatchType]
-    field :sails, [Types::SailType]
-    field :engines, [Types::EngineType]
-    field :daily_summaries, [Types::DailySummaryType]
-    field :courses, [Types::CourseType]
+    field :trips, [ Types::TripType ]
+    field :log_entries, [ Types::LogEntryType ]
+    field :watches, [ Types::WatchType ]
+    field :sails, [ Types::SailType ]
+    field :engines, [ Types::EngineType ]
+    field :daily_summaries, [ Types::DailySummaryType ]
+    field :courses, [ Types::CourseType ]
   end
 end
