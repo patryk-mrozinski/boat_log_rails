@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_21_145117) do
+ActiveRecord::Schema[7.2].define(version: 2024_08_21_193713) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "pgcrypto"
@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_21_145117) do
     t.index ["trip_id"], name: "index_daily_summaries_on_trip_id"
   end
 
-  create_table "engines", force: :cascade do |t|
+  create_table "engines", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "type_name", null: false
     t.integer "power", null: false
     t.string "brand", null: false
