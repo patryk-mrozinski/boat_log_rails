@@ -8,6 +8,6 @@ class CreateBoatUsers < ActiveRecord::Migration[7.2]
     end
 
     # prevent duplicate entries
-    add_index :boat_users, [:boat_id, :user_id], unique: true
+    add_index :boat_users, [ :boat_id, :user_id ], unique: true
   end
 end

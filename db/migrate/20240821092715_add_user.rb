@@ -5,7 +5,7 @@ class AddUser < ActiveRecord::Migration[7.2]
       t.citext :last_name, null: false
       t.citext :email, null: false
       t.string :password_digest, null: false
-      
+
       t.boolean :boat_owner, default: false
       t.string :role
 

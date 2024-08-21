@@ -32,5 +32,5 @@ class Trip < ApplicationRecord
 
   validates_presence_of :departure_time, :departure_location
 
-  enum :status, draft: "draft", in_progress: "in_progress", finished: "finished"
+  enum :status, draft: 'draft', in_progress: 'in_progress', finished: 'finished'
 end
