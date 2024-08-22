@@ -11,6 +11,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'graphql', '~> 2.3'
 gem 'graphiql-rails', '~> 1.10'
 gem 'sprockets-rails', '~> 3.5'
+gem 'devise'
 
 group :development, :test do
   gem 'annotate'
