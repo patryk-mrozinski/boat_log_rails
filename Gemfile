@@ -5,13 +5,14 @@ gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
-gem 'bcrypt', '~> 3.1.7'
 
 # graphql related
 gem 'graphql', '~> 2.3'
 gem 'graphiql-rails', '~> 1.10'
 gem 'sprockets-rails', '~> 3.5'
 gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'annotate'
