@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_22_131246) do
+ActiveRecord::Schema[7.2].define(version: 2024_08_22_175134) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
   enable_extension "pgcrypto"
@@ -85,6 +85,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_22_131246) do
     t.index ["boat_id"], name: "index_engines_on_boat_id"
   end
 
+  create_table "jwt_denylists", force: :cascade do |t|
+    t.string "jti"
+    t.datetime "exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jti"], name: "index_jwt_denylists_on_jti"
+  end
+
   create_table "log_entries", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.integer "course_angle", null: false
     t.string "see_condition", null: false
@@ -140,7 +148,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_22_131246) do
     t.citext "first_name", null: false
     t.citext "last_name", null: false
     t.citext "email", default: "", null: false
-    t.string "password_digest", null: false
     t.boolean "boat_owner", default: false
     t.string "role"
     t.datetime "created_at", null: false
