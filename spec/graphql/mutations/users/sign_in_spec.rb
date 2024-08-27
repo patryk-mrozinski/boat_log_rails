@@ -9,7 +9,7 @@ RSpec.describe Mutations::Users::SignIn, type: :request do
   let(:query_context) { {} }
   let(:query_variables) do
     {
-      email: email,
+      email:    email,
       password: password
     }
   end

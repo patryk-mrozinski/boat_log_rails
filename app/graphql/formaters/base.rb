@@ -17,14 +17,14 @@ module Formaters
     def success_response
       {
         success: true,
-        error: ''
+        error:   ''
       }
     end
 
     def fail_response
       {
         success: false,
-        error: response.errors.join(', ')
+        error:   response.errors.join(', ')
       }
     end
   end

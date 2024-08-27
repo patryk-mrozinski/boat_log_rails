@@ -16,7 +16,7 @@ module Formaters
     def success_response
       {
         token: @response.object,
-        user: @user,
+        user:  @user,
         **super
       }
     end
@@ -24,7 +24,7 @@ module Formaters
     def fail_response
       {
         token: @response.object,
-        user: nil,
+        user:  nil,
         **super
       }
     end
