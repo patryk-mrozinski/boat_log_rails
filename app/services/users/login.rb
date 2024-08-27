@@ -4,9 +4,9 @@ module Users
       if user&.valid_password?(password)
         token = Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first
 
-        Result.new(success: true, object: token  )
+        Result.new(success: true, object: token)
       else
-        Result.new(success: false, errors: ['Invalid credentials'])
+        Result.new(success: false, errors: [ 'Invalid credentials' ])
       end
     end
   end
