@@ -18,12 +18,12 @@ module Types
       ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
-    field :boats, [ Types::BoatType ], null: false
-    def boats
-      Boat.all
-    end
+    # TODO: remove/replace: initial query for checking the funcionality
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :boats,
+          [ Types::BoatType ],
+          null:         false,
+          resolver:     Resolvers::Boats,
+          description: 'Return all boats'
   end
 end
