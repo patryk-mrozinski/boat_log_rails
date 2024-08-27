@@ -31,7 +31,6 @@ describe Users::Login do
       let(:password) { 'password1' }
 
       it 'returns error' do
-        # binding.pry
         expect(login.errors).to contain_exactly('Invalid credentials')
       end
 
