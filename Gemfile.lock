@@ -182,7 +182,7 @@ GEM
     parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
-    pg (1.5.7)
+    pg (1.5.8)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -338,7 +338,7 @@ DEPENDENCIES
   faker
   graphiql-rails (~> 1.10)
   graphql (~> 2.3)
-  pg (~> 1.1)
+  pg (~> 1.5)
   pry
   puma (>= 5.0)
   rack-cors
