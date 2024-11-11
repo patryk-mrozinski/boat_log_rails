@@ -7,7 +7,7 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 # graphql related
-gem 'graphql', '~> 2.3'
+gem 'graphql', '~> 2.4'
 gem 'graphiql-rails', '~> 1.10'
 gem 'sprockets-rails', '~> 3.5'
 gem 'devise'
